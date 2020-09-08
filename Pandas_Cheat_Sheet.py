@@ -1,6 +1,6 @@
 #Some basic methods and their application in pandas.
 #Importing Pandas to use the methods.
-#import pandas as pd
+import pandas as pd
 
 #To create DataFrames.
 pd.DataFrame({'Yes': [50, 21], 'No': [131, 2]})
