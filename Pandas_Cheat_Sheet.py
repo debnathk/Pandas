@@ -7,7 +7,7 @@ import pandas as pd
 #Creating Data files - DataFrames & Series
 
 #To create DataFrames.
-first_df = pd.DataFrame({'Yes': [50, 21], 'No': [131, 2]})
+first_df = pd.DataFrame({'A': [50, 21, 34, 99, 21, 231], 'B': [131, 2, 342, 563, 90, 88], 'C' : [12, 22, 55, 98, 94, 21], 'D' : [11, 236, 54, 75, 91, 20]})
 print(first_df)
 second_df = pd.DataFrame({'Bob': ['I liked it.', 'It was awful.'], 'Sue': ['Pretty good.', 'Bland.']})
 print(second_df)
@@ -35,3 +35,105 @@ print("\n")
 print(first_df.head())
 
 #--------------------------------------------------------------------------------------------------------
+
+#Native accessors
+print(first_df)
+
+#To print the A column elements
+print(first_df.A)
+print(first_df['A']
+print(first_df.C)
+print(first_df['C']      
+      
+#To print a specific element of Yes column
+print(first_df['A'][0])
+
+   
+      
+#Indexing
+#Index-based selection     
+print(first_df.iloc[0])
+      
+#To get a column with iloc      
+print(first_df.iloc[:, 0])  
+print(first_df.iloc[:4, 0])      
+print(first_df.iloc[1:4, 0])
+
+#To pass a list
+print(first_df.iloc[[0, 1, 2], 2])     
+
+#To get last 3 elements
+print(first_df.iloc[-3: ])    
+      
+      
+#Label-based selection
+print(first_df.loc[0, 'B'])
+print(first_df.loc[:, ['A', 'B', 'D']])      
+      
+#Choosing between iloc and loc - 
+#iloc uses the Python stdlib indexing scheme,
+#where the first element of the range is included and the last one excluded. 
+#So 0:10 will select entries 0,...,9. 
+#loc, meanwhile, indexes inclusively. So 0:10 will select entries 0,...,10.   
+      
+
+      
+#Manupulating the index
+print(first_df.set_index("D"))  
+      
+    
+      
+#Conditional Selection
+print(first_df.A == 21)
+print(first_df.loc[first_df.A == 21])     
+print(first_df.loc[(first_df.A == 21) & (first_df.C ==21)])      
+print(first_df.loc[(first_df.A == 21) | (first_df.C ==21)])     
+print(first_df.loc[first_df.A.isin([50, 99])]) 
+print(first_df.loc[first_df.A.notnull()])      
+
+      
+      
+#Assigning Data
+first_df['A'] = 100
+print(first_df['A'])  
+      
+first_df['B'] = range(len(first_df), 0, -1)
+print(first_df['B'])   
+      
+#-----------------------------------------------------------------------------------------------------------      
+            
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
