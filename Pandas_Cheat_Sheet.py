@@ -102,9 +102,20 @@ print(first_df['B'])
       
 #-----------------------------------------------------------------------------------------------------------      
             
-
-
+#Summary functions
       
+print(first_df.C.describe())   
+      
+#To get the `mean`
+print(first_df.C.mean())       
+
+#To check the unique values
+print(first_df.C.unique())       
+      
+#To count each values
+print(first_df.C.value_counts())       
+      
+     
       
       
       
