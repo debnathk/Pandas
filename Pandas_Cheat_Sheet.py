@@ -113,7 +113,25 @@ print(first_df.C.mean())
 print(first_df.C.unique())       
       
 #To count each values
-print(first_df.C.value_counts())       
+print(first_df.C.value_counts()) 
+      
+      
+#Maps
+#Using map() function      
+first_df_C_mean = first_df.C.mean()
+print(first_df.map(lambda p: p - first_df_C_mean))   
+      
+#Using apply() function
+def remean_C(row):
+      row.C = row.C - first_df_C_mean
+      return row    
+print(first_df.apply(remean_C, axis = 'columns'))     
+      
+#----------------------------------------------------------------------------------------------------------------      
+      
+      
+      
+      
       
      
       
