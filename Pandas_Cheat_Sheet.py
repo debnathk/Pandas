@@ -127,7 +127,11 @@ def remean_C(row):
       return row    
 print(first_df.apply(remean_C, axis = 'columns'))     
       
-#----------------------------------------------------------------------------------------------------------------      
+#----------------------------------------------------------------------------------------------------------------     
+      
+#Groupwise analysis
+#Using value_counts() function
+print(first_df.D.value_counts())      
       
       
       
