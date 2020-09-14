@@ -131,7 +131,25 @@ print(first_df.apply(remean_C, axis = 'columns'))
       
 #Groupwise analysis
 #Using value_counts() function
-print(first_df.D.value_counts())      
+print(first_df.D.value_counts())    
+      
+#Using min() function
+print(first_df.groupby('C').D.min())
+      
+#using apply() function
+print(first_df.groupby('C').apply(lambda df: df.A.iloc[0]))
+print(first_df.groupby(['C', 'A']).apply(lambda df: df.loc[df.A.idxmax()]))
+      
+#Using agg() function
+print(first_df.groupby(['C']).A.agg([len, min, max]))   
+      
+      
+#Multi - indexes
+countries_reviewed = reviews.groupby(['A', 'C']).description.agg([len])
+print(countries_reviewed)  
+      
+      
+      
       
       
       
