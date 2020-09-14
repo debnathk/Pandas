@@ -145,8 +145,14 @@ print(first_df.groupby(['C']).A.agg([len, min, max]))
       
       
 #Multi - indexes
-countries_reviewed = reviews.groupby(['A', 'C']).description.agg([len])
-print(countries_reviewed)  
+first_df_2 = first_df.groupby(['A', 'C']).description.agg([len])
+print(first_df_2)  
+      
+
+#Sorting
+print(first_df_2.sort_values(by='len', ascending=False))
+      
+#-----------------------------------------------------------------------------------------------------------------      
       
       
       
