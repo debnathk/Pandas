@@ -153,7 +153,27 @@ print(first_df_2)
 print(first_df_2.sort_values(by='len', ascending=False))
       
 #-----------------------------------------------------------------------------------------------------------------      
-   
+
+#Data types      
+#Using the function dtype() to check the data-type
+print(first_df.dtype)      
+print(first_df.C.dtype)
+      
+#Using the function astype() for conversion
+print(first-df.C.astype('float64')      
+      
+
+#Missing data
+#Using isnull(), notnull() function to check null, not-null values respectively.      
+print(first_df[pd.isnull(first_df.C)])
+print(first_df[pd.notnull(first_df.C)])  
+      
+#Using fillna() function to replace null values
+print(first_df.A.fillna("Unknown"))      
+      
+#Using replace() method to repace column values
+print(first_df.A.replace(99, 100))      
+      
 #-----------------------------------------------------------------------------------------------------------------        
       
       
