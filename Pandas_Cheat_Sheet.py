@@ -176,7 +176,9 @@ print(first_df.A.replace(99, 100))
       
 #-----------------------------------------------------------------------------------------------------------------        
 #Renaming using rename() function
-print(first_df.rename(columns={'C':'F'}))      
+print(first_df.rename(columns={'C':'F'}))     
+      
+print(first_df.rename(index={0: 'firstEntry', 1: 'secondEntry'}))
       
 #-----------------------------------------------------------------------------------------------------------------        
       
