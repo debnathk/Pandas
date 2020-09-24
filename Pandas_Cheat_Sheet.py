@@ -9,7 +9,7 @@ import pandas as pd
 #To create DataFrames.
 first_df = pd.DataFrame({'A': [50, 21, 34, 99, 21, 231], 'B': [131, 2, 342, 563, 90, 88], 'C' : [12, 22, 55, 98, 94, 21], 'D' : [11, 236, 54, 75, 91, 20]})
 print(first_df)
-second_df = pd.DataFrame({'Bob': ['I liked it.', 'It was awful.'], 'Sue': ['Pretty good.', 'Bland.']})
+second_df = pd.DataFrame({'Bob': ['I liked it.', 'It was awful.'], 'Sue': ['Pretty good.', 'Bland.']}, 'Henry' : ['Not Bad.', 'Poor.'])
 print(second_df)
 
 #To create DataFrames using index.
