@@ -183,7 +183,12 @@ print(first_df.rename(columns={'C':'F'}))
 print(first_df.rename(index={0: 'firstEntry', 1: 'secondEntry'}))
 
 #Combining using concat() function
-pd.concat([first_df, second_df])      
+first_df2 = pd.DataFrame({'A': [12, 33, 14, 89, 22, 296], 
+                         'B': [34, 40, 32, 52, 9, 80],
+                         'C' : [99, 242, 78, 22, 93, 1], 
+                         'D' : [26, 542, 57, 89, 85, 512]}, 
+                        index = [6,7,8,9,10,11])      
+pd.concat([first_df, first_df2])      
       
 #-----------------------------------------------------------------------------------------------------------------        
    
