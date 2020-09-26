@@ -175,18 +175,18 @@ print(first_df.A.fillna("Unknown"))
 print(first_df.A.replace(99, 100))      
       
 #-----------------------------------------------------------------------------------------------------------------        
+
 #Renaming using rename() function
 print(first_df.rename(columns={'C':'F'}))     
    
 #Renaming of the indexes      
 print(first_df.rename(index={0: 'firstEntry', 1: 'secondEntry'}))
 
-     
-      
+#Combining using concat() function
+pd.concat([first_df, second_df])      
       
 #-----------------------------------------------------------------------------------------------------------------        
-      
-#---------------------------------------------------
+   
       
       
       
